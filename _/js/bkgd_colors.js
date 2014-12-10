@@ -4,6 +4,9 @@
 		}
 
 	var h=window.innerHeight/5 + "px";
+	var t=window.innerHeight + "px";
+	var d=window.innerWidth;
+	var w=window.innerWidth + "px";
 
 var app = {
 
@@ -26,37 +29,29 @@ var app = {
 	pageStyles: function(){
 		$("div#1 h1").html(app.colorMachine());
 			$("div#1").css({
-			'background-color': app.colorMachine(),
-			'height': h
+			'background-color': app.colorMachine()
 			});
 
 		$("div#2 h1").html(app.colorMachine());
 		$("div#2").css({
-			'background-color': app.colorMachine(),
-			'height': h
+			'background-color': app.colorMachine()
 			});
 
 		$("div#3 h1").html(app.colorMachine());
 		$("div#3").css({
-			'background-color': app.colorMachine(),
-			'height': h
+			'background-color': app.colorMachine()
 			});
 
 		$("div#4 h1").html(app.colorMachine());
 		$("div#4").css({
-			'background-color': app.colorMachine(),
-			'height': h
+			'background-color': app.colorMachine()
 			});
 
 		$("div#5 h1").html(app.colorMachine());
 		$("div#5").css({
-			'background-color': app.colorMachine(),
-			'height': h
+			'background-color': app.colorMachine()
 			});
 
-		$("div h1").css({
-			'line-height': h
-			});
 	},
 
 	init: function() {
@@ -72,6 +67,18 @@ var app = {
 };
 
 $(document).ready(function() {
+
+	if(d>735){
+		console.log("greater than 735px");
+		$("div.bkgd").css({'height': t});
+		$("div h1").css({'line-height': t});
+	}else{
+		console.log("less than 735px");
+		$("div.bkgd").css({'height': h});
+		$("div h1").css({'line-height': h});
+	}
+
 	app.pageStyles();
 	app.init();
+
 });

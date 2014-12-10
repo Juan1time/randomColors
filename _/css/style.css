@@ -6,3 +6,8 @@ body{width:100%;margin:0 auto;overflow:hidden;font-family:arial,sans-serif;}
 body div{width:100%;min-height:4em; transition:background-color 3s ease;}
 h1,p{text-align:center;color:rgba(255, 255, 255, 0.65);}
 h1{font-size:1.2em;}
+
+@media screen and (min-width: 735px) {
+	body div{width:20%; float:left; min-height:4em; transition:background-color 3s ease;}
+
+	}
