@@ -7,6 +7,9 @@
 	var t=window.innerHeight + "px";
 	var d=window.innerWidth;
 	var w=window.innerWidth + "px";
+    
+    //decide how many divs to make
+    var divs = 1;
 
 var app = {
 
@@ -53,6 +56,33 @@ var app = {
 			});
 
 	},
+    
+    makeDivs: function(num){
+        var newDiv = "<div class=" + '"newDiv"' + "></div>";
+        
+        for(i=1; i<=num; i++){
+            $("body").append(newDiv);
+        }
+        
+        //check I have the div created correctly
+        console.log(newDiv);
+        
+        //create array with all the newDivs
+        var myList=document.querySelectorAll('.newDiv');
+        
+        //check I have selected the newDivs correctly
+        console.log(myList.length);
+        //console.dir(myList);
+        
+    },
+    
+    colorDivs: function(){
+       
+        $.each($('.newDiv'), function() { 
+                $(this).css({'background-color': app.colorMachine()})
+        });
+        
+    },
 
 	init: function() {
 		console.log("color 1: " + app.colorMachine());
@@ -60,7 +90,10 @@ var app = {
 		console.log("color 3: " + app.colorMachine());
 		console.log("color 4: " + app.colorMachine());
 		console.log("color 5: " + app.colorMachine());
-		setInterval(app.pageStyles, app.timeMachine());
+		app.makeDivs(divs);
+		app.colorDivs(divs);
+        //setInterval(app.colorDivs, app.timeMachine());
+        setInterval(app.colorDivs, 12000);
 		console.log("new ms: " + app.timeMachine());
 	}
 
@@ -78,7 +111,7 @@ $(document).ready(function() {
 		$("div h1").css({'line-height': h});
 	}
 
-	app.pageStyles();
+	//app.pageStyles();
 	app.init();
 
 });
