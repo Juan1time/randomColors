@@ -56,6 +56,16 @@ var app = {
 			});
 
 	},
+
+	keyAction: function(){
+		$(window).keypress(function (e) {
+		  if (e.keyCode === 0 || e.keyCode === 32) {
+		    e.preventDefault()
+		    console.log('Space pressed');
+		    
+		  }
+		})
+	},
     
     makeDivs: function(num){
         var newDiv = "<div class=" + '"newDiv"' + "></div>";
