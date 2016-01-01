@@ -68,21 +68,33 @@ var app = {
 	},
 
 	rGradient: function(element){
+		var color1=rRGB();
+		var color2=rRGB();
 		$(element).css({
-			'background': 'linear-gradient(to bottom,'+rRGB() + '15%,' + rRGB()+'85%'
-		})
+			//'background': 'linear-gradient(to bottom,'+rRGB() + '15%,' + rRGB()+'85%'
+			'background': 'linear-gradient(to bottom,'+color1 + '15%,' + color2+'85%'
+		});
+		$('span#color1').html(color1);
+		$('span#color2').html(color2)
+
 	},
 
 	rWhiteGradient: function(element){
+		var color1=rRGB();
 		$(element).css({
-			'background': 'linear-gradient(to bottom,'+rRGB() + '15%, rgba(255,255,255,1)'
-		})
+			'background': 'linear-gradient(to bottom,'+color1 + '15%, rgba(255,255,255,1)'
+		});
+		$('span#color1').html(color1);
+		$('span#color2').html('')
 	},
 
 	rBlackGradient: function(element){
+		var color1=rRGB();
 		$(element).css({
-			'background': 'linear-gradient(to bottom,'+rRGB() + ', rgba(5,5,5,1)'
-		})
+			'background': 'linear-gradient(to bottom,'+color1 + ', rgba(5,5,5,1)'
+		});
+		$('span#color1').html(color1);
+		$('span#color2').html('')
 	},
 
 	rMonoGradient: function(element){
@@ -91,13 +103,18 @@ var app = {
 		console.log(colors.newMColor);
 		$(element).css({
 			'background': 'linear-gradient(to bottom,'+colors.newColor + '15% ,' + colors.newMColor + '85%'
-		})
+		});
+		$('span#color1').html(colors.newColor);
+		$('span#color2').html(colors.newMColor)
 	},
 
 	rSolid: function(element){
+		var color1=rRGB();
 		$(element).css({
-			'background': rRGB()
-		})
+			'background': color1
+		});
+		$('span#color1').html(color1);
+		$('span#color2').html('')
 	},
 
 	keyAction: function(){
