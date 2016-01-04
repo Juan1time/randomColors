@@ -120,27 +120,27 @@ var app = {
 	keyAction: function(){
 		$(window).keypress(function (e) {
 			console.log(e);
-		  if (e.keyCode === 32) {
+		  if (e.which === 32) {
 		    e.preventDefault()
 		    console.log('spacebar = background gradient');
 		    app.rGradient("body");
 		  } 
-		  	else if(e.keyCode === 118){
+		  	else if(e.which === 118){
 		  	e.preventDefault()
 		    console.log('v = solid background');
 		    app.rSolid("body");
 		  }
-		  	else if (e.keyCode === 98){
+		  	else if (e.which === 98){
 		  	e.preventDefault()
 		    console.log('b = gradient to white');
 		    app.rWhiteGradient("body");
 		  }
-		  else if (e.keyCode === 110){
+		  else if (e.which === 110){
 		  	e.preventDefault()
 		    console.log('n = gradient to black');
 		    app.rBlackGradient("body");
 		  }
-		  else if (e.keyCode === 109){
+		  else if (e.which === 109){
 		  	e.preventDefault()
 		    console.log('m = monochromatic gradient');
 		    app.rMonoGradient("body");
