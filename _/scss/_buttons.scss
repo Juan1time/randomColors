@@ -1,0 +1,19 @@
+button{
+	background:none;
+	border-radius:none;
+	border:none;
+	color:$offWhite;
+	font-size:1.25em;
+	padding:.25em .45em;
+	height:1.85em;
+	width:100%;
+	display:block;
+	text-align:left;
+}
+button:hover{
+	background:rgba(255, 255, 255, 0.15);
+	}
+button:focus{
+	border:none;
+	outline:none;
+}

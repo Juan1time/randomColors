@@ -1,0 +1,29 @@
+body{
+  *{
+    box-sizing:border-box;
+  }
+  width:100%;
+  margin:0;
+  padding:0 2.5%;
+  box-sizing:border-box;
+  ul, h1{
+    //max-width:90%;
+    margin:0 auto 1.5rem;
+    color:$offWhite;
+  }
+  ul{
+    border:solid 6px $offWhite;
+    margin-bottom:2em;
+  }
+  @include break(30em){
+    h1,ul{
+      margin:0 0 1.5rem;
+    }
+    h1{
+      max-width:30ch;
+    }
+    ul{
+      max-width:50ch;
+    }
+  }
+}

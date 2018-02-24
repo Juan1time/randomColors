@@ -3,7 +3,7 @@
 <!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 <head>
 	<meta charset="utf-8">
@@ -14,15 +14,15 @@
 
 	<!-- concatenate and minify for production -->
 	<link rel="stylesheet" href="_/css/reset.css" />
-	<link rel="stylesheet" href="_/css/style.css" />
+	<link rel="stylesheet" href="_/css/styles.css" />
 </head>
 
 <body>
-	
-	<h1>This is a random color experiment</h1>
+
+	<h1>This is a random color generator</h1>
 
 	<ul id="options">
-		<li><button id="solid">Solid Background</button></li>
+		<li><button id="solid" alt="button generates a random solid background color">Solid Background</button></li>
 		<li><button id="gradient">Gradient Background</button></li>
 		<li><button id="gradient-black">Gradient to Black</button></li>
 		<li><button id="gradient-white">Gradient to White</button></li>
@@ -30,37 +30,20 @@
 	</ul>
 
 	<ul id="results">
-		<li><span id="color1"></span></li>
-		<li><span id="color2"></span></li>
+		<li><pre id="color1"><code></code></pre></li>
+		<li><pre id="color2"><code></code></pre></li>
+		<!-- <li><span id="color1"></span></li>
+		<li><span id="color2"></span></li> -->
 	</ul>
-<!--
-		<div class="bkgd" id="1">
-			<h1></h1>
-		</div>
-
-		<div class="bkgd" id="2">
-			<h1></h1>
-		</div>
-
-		<div class="bkgd" id="3">
-			<h1></h1>
-		</div>
-
-		<div class="bkgd" id="4">
-			<h1></h1>
-		</div>
-
-		<div class="bkgd" id="5">
-			<h1></h1>
-		</div>
--->
 
 <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write("<script src='_/js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
 <!-- <script src="_/js/bkgd_colors.js"></script> -->
-<script src="_/js/rColors.js"></script>
+<script src="_/js/prod/rColors_d.js"></script>
 
 </body>
 </html>
